@@ -1,0 +1,41 @@
+.inactive {
+	display: none;
+}
+
+html {
+	width: 100%;
+	height: 100%;
+	padding: 8px 12px 0 12px;
+}
+
+#gomoku-wrapper {
+	position: relative;
+}
+
+#gomoku-game {
+	display: none;
+	text-align: center;
+}
+
+#gomoku-board {
+	margin: 0 auto;
+	border: 1px solid #aaa;
+	background-color: #fefefe;
+}
+
+#menu {
+	position: absolute;
+	top: 9px;
+	left: 9px;
+}
+
+#alert {
+	width: 70%;
+	margin: 0 auto;
+	position: fixed;
+	top: 80px;
+	right: 0;
+	left: 0;
+	text-align: center;
+	z-index: 1;
+}

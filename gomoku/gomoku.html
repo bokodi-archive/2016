@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Gomoku</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
+	<link rel="stylesheet" href="gomoku.css" />
+</head>
+<body>
+	<div id="alert" class="alert alert-success inactive">
+		<button type="button" id="close" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+		<span id="message"></span>
+	</div>
+	
+	<div id="gomoku-wrapper" class="container-fluid">
+		<div id="menu">
+			<button id="back" type="button" class="btn btn-default btn-sm inactive">menu</button>
+			<div id="log"></div>
+		</div>
+		
+		<div class="row">
+			<div id="gomoku-settings" class="col-sm-6 col-sm-offset-3">
+				<form class="well form-horizontal">
+					<div class="form-group">
+						<label for="gomoku-rows" class="col-sm-2 control-label">Rows</label>
+						<div class="col-sm-10">
+							<input type="number" id="gomoku-rows" class="form-control input-sm" min="5" max="99" value="15" />
+							<span class="help-block inactive">Incorrect value.</span>
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="gomoku-cols" class="col-sm-2 control-label">Columns</label>
+						<div class="col-sm-10">
+							<input type="number" id="gomoku-cols" class="form-control input-sm" min="5" max="99" value="25" />
+							<span class="help-block inactive">Incorrect value.</span>
+						</div>
+					</div>
+
+					<div class="form-group">
+						<label for="player-1" class="col-sm-2 control-label">Player 1</label>
+						<div class="col-sm-10">
+							<select id="player-1" class="form-control input-sm">
+								<option value="1" selected>human</option>
+								<option value="2">cpu</option>
+							</select>
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="player-2" class="col-sm-2 control-label">Player 2</label>
+						<div class="col-sm-10">
+							<select id="player-2" class="form-control input-sm">
+								<option value="2" selected>cpu</option>
+								<option value="1">human</option>
+							</select>
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="player-3" class="col-sm-2 control-label">Player 3</label>
+						<div class="col-sm-10">
+							<select id="player-3" class="form-control input-sm">
+								<option value="0" selected>none</option>
+								<option value="2">cpu</option>
+								<option value="1">human</option>
+							</select>
+						</div>
+					</div>
+
+					<div class="form-group">
+						<div class="col-sm-offset-2 col-sm-10">
+							<button type="button" id="gomoku-start" class="btn btn-xs btn-default">Start</button>
+						</div>
+					</div>
+				</form>
+			</div>
+
+			<div id="gomoku-game" class="well well-sm">
+				<canvas id="gomoku-board"></canvas>
+			</div>
+		</div>
+
+	</div>
+
+	<script src="gomoku.js"></script>
+</body>
+</html>
